@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+
+        .boxes div{
+            height: 150px;
+            width: 150px;
+            border: 2px solid black;
+            border-radius: 50%;
+        }
+
+        .boxes{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+        }
+
+        #box1{
+            height: 150px;
+            width: 150px;
+            background-color: rgb(96, 241, 144);
+            border-radius: 50%;
+            transition: scale 2s;
+
+            &:hover{
+                transform: scale(1.5);
+                background-color: rgb(144, 226, 249);
+            }
+        }
+        #box2{
+            height: 150px;
+            width: 150px;
+            background-color: brown;
+            text-align: center;
+            line-height: 150px;
+            border-radius: 50%;
+            transition: rotate 1s;
+
+            &:hover{
+                transform: rotate(360deg);
+                background-color: aqua;
+            }
+        }
+        #box3{
+            height: 150px;
+            width: 150px;
+            background-color: rgb(248, 199, 40);
+            border-radius: 50%;
+            transition: scale 2s;
+
+            &:hover{
+                transform: translate3d(150px, 150px, 150px);
+                background-color: rgb(13, 14, 14);
+            }
+        }
+
+        .box{
+            text-align: center;
+        }
+        h1{
+            margin-top: 50px;
+            text-align: center;
+            color: rgb(0, 0, 0);
+            font-size: 2em;
+        }
+        .box img{
+            margin: 20px;
+            width: 150px;
+            height: 150px;
+            border: 2px solid black;
+            /* opacity: 0;
+            transition: opacity 1.5s ease-in-out; */
+            animation: fadeEffect 1.5s infinite alternate;
+        }
+
+        /* .box img:hover{
+            opacity: 1;
+        } */
+
+        @keyframes fadeEffect {
+        from{ 
+            opacity: 0; 
+        }
+        to { 
+            opacity: 1;
+         }
+    }
+
+    .loder img{
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        margin: auto;
+        position: absolute;
+        padding: 15px;
+    }
+    .loder{
+        position: relative;
+        height: 150px;
+        width: 150px;
+        /* border-radius: 50%;
+        border: 20px solid rgb(208, 195, 195);
+        border-top: 20px solid rgb(0, 0, 0); */
+        /* animation: rotate 2s linear infinite; */ 
+        margin: auto;
+    }
+    .loder div{
+        position: relative;
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+        border: 20px solid rgb(208, 195, 195);
+        border-top: 20px solid rgb(0, 0, 0);
+        margin: auto;
+        animation: rotate 2s linear infinite;
+    }
+
+
+    @keyframes rotate{
+        from{
+            transform: rotate(0deg);
+        }
+        to{
+            transform: rotate(360deg);
+        }
+    }
+
+    .bouncer{
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+        background-color: brown;
+        margin-top: 100px;
+        animation: bouncer 2s linear infinite;
+    }
+
+    @keyframes bouncer{
+            25%{
+                transform: translate(25vw, 150px);
+            }
+            50%{
+                transform: translate(50vw, 0px);
+            }
+            75%{
+                transform: translate(75vw, 150px);
+            }100%{
+                transform: translate(100vw, 0px);
+            }
+        }
+    
+        
+    </style>
+</head>
+<body>
+
+    <div class="boxes">
+        <div id="box1"></div>
+        <div id="box2">Rotate Me!</div>
+        <div id="box3"></div>
+    </div>
+    <div class="box">
+        <h1>Fade Effect</h1>
+        <img src="https://plus.unsplash.com/premium_photo-1681488718957-bba64aa6ce13?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+        <img src="https://plus.unsplash.com/premium_photo-1674168839755-54c8b5e5f4d7?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+        <img src="https://plus.unsplash.com/premium_photo-1675620963970-41055a7d6cfc?q=80&w=1970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+        <img src="https://plus.unsplash.com/premium_photo-1692282102086-dd1b930ff204?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+    </div>
+    <h1>Loder</h1>
+    <div class="loder">
+        <img src="https://rukminim3.flixcart.com/image/850/1000/l1mh7rk0/poster/b/s/j/medium-famous-cartoon-poster-for-kids-shinchan-cartoon-wall-original-imagd5fcasqbqfcg.jpeg?q=20&crop=false" alt="">
+        <div></div></div>
+
+        <h1>Bouncer</h1>
+        <div class="bouncer">
+
+        </div>
+    
+</body>
+</html>
